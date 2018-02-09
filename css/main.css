@@ -177,7 +177,10 @@ a:after {
 	font-size: 20px;
 	color: white;
 }
+.margin-align{
 
+	margin-top:5vmin;
+}
 /* Intnro Wrap */
 
 #intro {
