@@ -1,304 +1,337 @@
- /* Author: Carlos Alvarez
- * URL: http://alvarez.is
- *
- * Project Name: Kelvin - Free Bootstrap 3 Resume Theme
- * Version: 1.0
- * URL: http://blacktie.co
- */
+ /* Google fonts & font family
+==================================================*/
 
-body {
-  background-color: #f2f2f2;
-    font-family: "Lato";
-    font-weight: 300;
-    font-size: 16px;
-    color: #555;
+@import 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i';
 
-    -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
+/*
+font-family: 'Playfair Display', serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+
+/* typography
+==================================================*/
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size:6vmin;
+    line-height: 10vmin;
+    text-align:center;
 }
 
-/* Titles */
+h4 {
+    font-family: 'Lato', sans-serif;
+   font-size:3.4vmin;
+    letter-spacing: 2px;
+    position: relative;
+    color: #425BB5;
+    margin-left: 10vmin;
+   
+}
 
 
-/* Paragraph & Typographic */
+
+
+ /*preloader start*/
+
+#loading {
+  overflow: hidden;
+ 
+}
+#loader {
+     width: 20vmax;
+     height: 50vmax;
+     
+     margin:auto;
+     background-image: url(../img/other/preloader.jpg);
+     background-repeat: no-repeat;
+     background-position: center;
+ 
+}
+
+#mycontent{
+  display:none;
+} 
+/*preloader end*/
+
+/* Header
+==================================================*/
+
+header {
+    text-align: center;
+   
+    height: 65px;
+}
+
+nav ul {
+    display: inline-block;
+    padding-left: 0;
+    list-style: none;
+    padding: 2vmin;
+    margin-bottom: 0;
+  }
+
+nav li {
+    display: inline-block;
+    margin: 2vmin;
+}
+
+nav li a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #444;
+    font-size: 2vmin;
+    font-weight: bold;
+}
+
+.bg-nav {
+    background: #fff;
+    border-bottom: 1px solid #f3f3f3
+}
+
+.bg-nav ul {
+   padding:0.4vmin;
+}
+
+a:focus {
+    color: #444;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #425BB5;
+    text-decoration: none;
+}
+
+a.active {
+    color: #425BB5;
+}
+
+/*header end*/
+
+
+
+/* home section
+==================================================*/
+
+#home {
+    background: url(../img/other/road.png);
+    background-size: cover;
+    height: 100vh;
+    box-shadow: 2px 5px 5px  #888888;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+
+.disply-table {
+    display: table;
+    height: 100vh;
+    text-align:center;
+   
+
+
+} 
+/*home secttion end*/
+
+/* Paragraph */
 p {
     line-height: 5vmin;
     margin-bottom:2vmin;
 }
 
-.centered {
-    text-align: center;
-}
-
-/* Links */
-a {
-    color: #f85c37;
-    word-wrap: break-word;
-
-    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-    transition: color 0.1s ease-in, background 0.1s ease-in;
-}
-
-a:hover,
-a:focus {
-    color: #7b7b7b;
-    text-decoration: none;
-    outline: 0;
-}
-
-a:before,
-a:after {
-    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-    transition: color 0.1s ease-in, background 0.1s ease-in;
-}
-
- hr {
+hr {
     display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
+   
     padding: 0;
 }
 
-
-/*---------------------------------------------------
-	3.1 Topbar
----------------------------------------------------*/
-
-#section-topbar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 10000;
-	overflow: visible;
-	font: normal 16px/24px  'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-#section-topbar a {
-  color: #fff;
-}
-
-#topbar-inner {
-	background: #111;
-	line-height: 0;
-	text-align: center;
-}
-
-/*
-	Top Bar
-
-	By default, top navigation bar uses "fixed" position
-*/
-#section-topbar ul#nav {
-	display: inline-block;
-	position: relative;
-	margin: 0;
-	padding: 0;
-
-	border-right: 1px solid #222;
-
-	/* For IE, the outcast */
-	zoom:1;
-	*display: inline;
-}
-
-#section-topbar ul#nav > li {
-	display: block;
-    float: left;
-    padding: 0;
-}
-
-
-#section-topbar ul#nav a {
-  display: block;
-  font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-decoration: none;
-  padding: 18px 20px 18px 20px;
-  border-left: 1px solid #222;
-}
-
-	#section-topbar ul#nav a:hover {
-	  background: #222;
-	  text-decoration: none;
-	  border-left: 1px solid #111;
-	}
-
-	#section-topbar ul#nav .active a {
-		background: #44bbaa;
-		border-left: 1px solid #111;
-	}
-
-		#section-topbar ul#nav .active a:hover {
-			background: #44bbaa;
-		}
-#section-topbar i {
-	font-size: 25px;
-}
-/*---------------------------------------------------
-	SECTION WRAPS
----------------------------------------------------*/
-
-/* Header Wrap */
-#headerwrap {
-	background: url(../img/header-bg.jpg) no-repeat center top;
-	margin-top: 60px;
-	padding-top:140px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 500px;
-	width: 100%;
-	
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-#headerwrap h1 {
-	font-size: 80px;
-	color: white;
-}
-
-#headerwrap h3 {
-	font-size: 20px;
-	color: white;
-}
-.margin-align{
-
-	margin-top:5vmin;
-}
-/* Intnro Wrap */
-
-#intro {
-	background: #2c3e50;
-	padding-top: 60px;
-	padding-bottom: 60px;
-	color: white;
-} 
-
-#intro h5, p {
-	color:  #425BB5;
-}
-
-#intro i {
-	color: white;
-	font-size: 20px;
-	padding-right: 8px;
-	vertical-align: middle;
-}
-
-
-#skillswrap {
-	background: #7395AE;
-	padding-top: 60px;
-	padding-bottom: 60px;
-	color: white;
-}
-
-#skillswrap h5{
-	color:white;
-	font-size:3.3vmin;
-
-}
-@media only screen and (max-width:1200px){
-     #skillswrap h5{
-        margin-left:10vmin;
-     }
-
-}
-span{
-	color:white;
-	font-family: "Raleway";
+/*Global styles*/
+p > sm{
     font-size:2.7vmin;
-    
-}
-.set{
-	margin-top:2vmin;
 }
 
-#footwrap {
-	background:#7395AE;
-	padding-top: 50px;
-	padding-bottom: 50px;
+.desc p{
+ font-family: "Raleway";
+    font-size:2.8vmin;
+   }
+
+
+
+#education{
+  padding-top:20px;
 }
+.top-adjust{
+   padding-top: 30px;
 
-
-
-#footwrap h5 {
-	color:white;
-	font-size:3.3vmin;
-}
-
-#footwrap p {
-	
-	font-size:2.6vmin;
-}
-@media only screen and (max-width:1200px){
-     .foot{
-        margin-left:10vmin;
-     }
-
-}
-
-#footwrap i {
-	padding-right: 3vmin;
-	color: #1abc9c;
-}
-
-/* Copyright Wrap */
-
-#c {
-	background: #E1E0E6;
-	padding-top: 15px;
-	text-align: right;
-}
-
-#c p {
-	color: #425BB5;
-}
-
-
-
-/* Global Values */
-
-.desc {
-	padding-top: 50px;
 }
 
 .desc p {
-	color: #2f2f2f;
+  color: #2f2f2f;
 }
 
 .desc t {
-	color: #34495e;
-	font-weight: 700;
+  color: #34495e;
+  font-weight: 700;
 }
 
 .desc imp {
-	padding: 6px;
-	color: white;
-	background: #34495e;
+  padding: 6px;
+  color: white;
+  background: #34495e;
 }
-
-.desc more {
-	color: #95a5a6;
-}
-
 
 sm {
-	font-size: 12px;
+  font-size: 12px;
 }
+
+.resume-heading{
+  font-size:5vmin;
+  color:#7395AE;
+  text-align:center;
+  font-family:'Playfair Display',verdana;
+  font-weight:bold;
+  text-shadow: 2px 2px 8px #7395AE;
+  
+}
+
+#image-style{
+    height:41.3vmin;
+
+    box-shadow: 2px 5px 5px  #888888;;
+}
+
+
+
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+
+  border-radius: 0;
+}
+
+.box-style{
+    box-shadow: 2px 5px 5px  #888888;
+    margin-top:8px;
+    margin-bottom:15px;
+}
+
+
+@media (max-width: 768px) {
+  #navbar li { width:100%; }
+}
+
+.box-img{
+    height:250px;
+    opacity:0.7;
+    width:100%;
+    
+}
+.text-style{
+  font-size:15px;
+  position:absolute;
+  top:45%;
+  background-color:white;
+  width:90%;
+  color:#557A95;
+ 
+  
+
+}
+.modal-heading{
+  font-size:3.8vmin;
+  
+  font-family:'Playfair Display',verdana;
+  
+  text-shadow: 2px 2px 8px #7395AE;
+}
+
+.remove-opacity{
+    opacity:1;
+}
+
+.modal-body p{
+    font-family:garamond;
+    font-size:3.3vmin;
+    margin-top:6px;
+}
+
+/*skills section progress bar start*/
+
+#progress {
+    background: #333;
+    border-radius: 13px;
+    height: 3.6vmin;
+    width: 60vmin;
+    padding: 3px;
+    
+}
+
+#progress span {
+    
+    display: block;
+    background: #557A95;
+    height:100%;
+    
+
+    border-radius: 9px;
+   
+
+}
+#adjust{
+  
+  z-index:1;
+ color:white;
+ margin-top:-3.6vmin;
+  margin-left:50vmin;
+   font-size:3.2vmin;
+}
+@media (max-width: 768px) {
+	#progress {
+    background: #333;
+    border-radius: 13px;
+    height: 16px;
+    width: 60vmin;
+    padding: 3px;
+    
+}
+
+
+
+	}
+@media (max-width: 768px) {
+  .sm-screen-adjust{
+    margin-top:5vmin;
+  }
+  .sm-screen-left{
+    margin-left:6vmin;
+    margin-right:6vmin;
+  }
+  
+}
+@media (max-width: 1024px) {
+.sm-screen-contact{
+   text-align:center;
+    margin-top:5vmin;
+
+  }
+}
+/*end*/
+/*#mycontent{
+  overflow-x: hidden;
+}*/
